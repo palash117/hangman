@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --p-color: #050a31;
+  --s-color: #57b3ee;
+  --t-color: #6d1de9;
+}
+body {
+  font-family: Lato, sans-serif;
+}
+.mainContainer {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%;
+  height: 100%; */
+  height: 100vh;
+  background-color: var(--p-color);
+}
+
+.gameArea {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  color: var(--s-color);
+  margin-bottom: 100px;
+}
+.imageArea {
+  margin: 30px 0;
+}
+.wordArea {
+  margin: 30px 0;
+}
+
+.word {
+  display: flex;
+  flex-direction: row;
+}
+.char {
+  color: var(--s-color);
+  border-bottom: 2px solid var(--t-color);
+  padding: 0 2px;
+  font-size: 200%;
+  margin: 0 3px;
+  min-width: 20px;
+}
+.wrongTries {
+  display: flex;
+  flex-direction: column;
+}
+.wt_header {
+  color: var(--t-color);
+}
+.wt_entries {
+  color: var(--s-color);
+}
+.notification {
+  background-color: var(--p-color);
+  border: 2px dashed var(--t-color);
+  color: var(--s-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 650px;
+  transform: translate3d(-50%, -50%, 0);
+  padding: 20px;
+  /* : 50%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.notificationHeader {
+  margin-top: 50px;
+}
+.notificationMessage {
+  margin: 50px;
+  text-align: center;
+}
+.retryGame {
+  background-color: var(--p-color);
+  border: 4px dashed var(--t-color);
+  color: var(--s-color);
+  font-size: 150%;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 5px 10px var(--s-color);
+}
+.retryGame:hover {
+  box-shadow: 9px 14px var(--s-color);
+  transform: translate3d(-2%, -2%, 0);
+}
+.retryGame:focus {
+  /* box-shadow: 5px 10px var(--s-color) inset; */
+  outline: none;
+  /* transform: translate3d(10px, 15px, 0); */
+}
+
+.hide {
+  visibility: hidden;
+}
+.hangmanImage {
+  fill: transparent;
+  height: 200px;
+  width: 200px;
+  stroke: var(--p-color);
+  stroke-width: 2px;
+}
+line,
+circle {
+  stroke: var(--t-color);
+  stroke-width: 3px;
+}
+.man {
+  stroke: var(--t-color);
+  stroke-opacity: 30%;
+}
+.showSvg {
+  stroke-opacity: 100%;
+}
+.banner {
+  color: var(--s-color);
+  margin-bottom: 50px;
+}
+.transformBanner {
+  transform: rotate(15deg) translateY(20px);
+  transition-delay: 1s;
+  transition-duration: 0.2s;
+}

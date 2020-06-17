@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="src/script.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="mainContainer">
+      <div class="gameArea">
+        <div class="banner">
+          <h3>save the</h3>
+        </div>
+        <div class="header">
+          <h1>HANGMAN</h1>
+        </div>
+        <div class="imageArea">
+          <svg height="200px" width="200px" class="hangmanImage">
+            <circle></circle>
+            <line x1="10" y1="5" x2="190" y2="5" />
+
+            <line x1="10" y1="5" x2="10" y2="195" />
+            <line x1="190" y1="5" x2="190" y2="195" />
+            <line x1="0" y1="195" x2="45" y2="195" />
+            <line x1="155" y1="195" x2="200" y2="195" />
+            <!-- rope -->
+
+            <line x1="100" y1="5" x2="100" y2="20" />
+            <circle cx="100" cy="40" r="20" />
+            <!-- man -->
+
+            <line x1="100" y1="120" x2="150" y2="150" class="svgLeg2 man" />
+            <line x1="100" y1="120" x2="50" y2="150" class="svgLeg1 man" />
+            <line x1="100" y1="80" x2="50" y2="50" class="svgTorso man" />
+            <line x1="100" y1="80" x2="150" y2="50" class="svgArm2 man" />
+            <line x1="100" y1="50" x2="100" y2="120" class="svgArm1 man" />
+            <circle cx="100" cy="40" r="10" class="svgHead man" />
+          </svg>
+        </div>
+
+        <div class="wordArea" id="wordArea">
+          <div class="word" id="word">
+            <div class="char">
+              a
+            </div>
+            <div class="char"></div>
+            <div class="char">
+              a
+            </div>
+          </div>
+        </div>
+        <div class="wrongTries hide">
+          <div class="wt_header">
+            wrong
+          </div>
+          <div class="wt_entries">
+            a,b,c,d;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="notification hide">
+      <div class="notificationHeader" id="notificationHeader">Congrats!</div>
+      <div class="notificationMessage" id="notificationMessage">You won!</div>
+      <button class="retryGame" id="retryGame">New game?</button>
+    </div>
+  </body>
+</html>
